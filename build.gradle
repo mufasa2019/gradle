@@ -6,6 +6,7 @@ plugins {
     id 'java'
     id 'maven-publish'
     id 'org.springframework.boot' version '2.3.4.RELEASE'
+    id "org.sonarqube" version "3.3"
 }
 
 repositories {
@@ -38,9 +39,7 @@ publishing {
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
-plugins {
-  id "org.sonarqube" version "3.3"
-}
+
 test { 
     useJUnitPlatform()
 }
